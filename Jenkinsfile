@@ -5,9 +5,9 @@ pipeline{
             steps{
 		echo "Build App now......"
                 sh "rm -rf SpringBootHelloWorld"
-                sh "git clone https://github.com/hugo01718/SpringBootHelloWorld.git/"
-                sh "mvn clean -f SpringBootHelloWorld"
-                sh "mvn package -f SpringBootHelloWorld"
+                sh "git clone https://github.com/hugo01718/SpringBootHelloWorld2.git/"
+                sh "mvn clean -f SpringBootHelloWorld2"
+                sh "mvn package -f SpringBootHelloWorld2"
 		sh "docker build . -t springboot_dockerimage"
 		sh "docker login -u hugo01718 -p 213456789"
 		//sh "docker push springboot_dockerimage"
